@@ -50,7 +50,7 @@ async function getAuthToken(attempt) {
     console.log(
       `Attempt to get auth-token in ${attempt} time${attempt > 1 ? 's' : ''}`
     );
-    return await this.getAuthToken(attempt--);
+    return await getAuthToken(--attempt);
   }
 }
 

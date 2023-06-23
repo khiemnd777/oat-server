@@ -6,10 +6,10 @@ module.exports = {
   },
   isNullOrEmpty(val) {
     return (
-      'undefined' === typeof attempt ||
-      attempt === null ||
-      String(attempt).trim() === '' ||
-      attempt.length === 0 ||
+      'undefined' === typeof val ||
+      val === null ||
+      String(val).trim() === '' ||
+      val.length === 0 ||
       Object.is(val, null)
     );
   },
