@@ -6,8 +6,6 @@ const { getApiUrl, testApiAvailable } = require('./utils/api-utils');
 
 const PORT = 8000;
 
-console.log(testApiAvailable('api/categories', 'POST'));
-
 const corsOptions = {
   origin: getApiUrl(),
   optionsSuccessStatus: 200, // some legacy browsers (IE11, various SmartTVs) choke on 204
@@ -18,40 +16,31 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors(corsOptions));
 
-app.get(/api\/+.*$/, async (req, res) => {
-  if (testApiAvailable(req.path, req.method)) {
-    const result = await wrap(req.path, req.method);
-    res.json(result);
-    return;
+async function doWrapping(path, method, body) {
+  if (testApiAvailable(path, method)) {
+    return await (body ? wrap(path, method, body) : wrap(path, method));
   }
-  res.json(null);
+  return null;
+}
+
+app.get(/api\/+.*$/, async (req, res) => {
+  const result = await doWrapping(req.path, req.method);
+  res.json(result);
 });
 
 app.post(/api\/+.*$/, async (req, res) => {
-  if (testApiAvailable(req.path, req.method)) {
-    const result = await wrap(req.path, req.method, req.body);
-    res.json(result);
-    return;
-  }
-  res.json(null);
+  const result = await doWrapping(req.path, req.method, req.body);
+  res.json(result);
 });
 
 app.put(/api\/+.*$/, async (req, res) => {
-  if (testApiAvailable(req.path, req.method)) {
-    const result = await wrap(req.path, req.method, req.body);
-    res.json(result);
-    return;
-  }
-  res.json(null);
+  const result = await doWrapping(req.path, req.method, req.body);
+  res.json(result);
 });
 
 app.delete(/api\/+.*$/, async (req, res) => {
-  if (testApiAvailable(req.path, req.method)) {
-    const result = await wrap(req.path, req.method);
-    res.json(result);
-    return;
-  }
-  res.json(null);
+  const result = await doWrapping(req.path, req.method);
+  res.json(result);
 });
 
 app.listen(PORT, () => {
