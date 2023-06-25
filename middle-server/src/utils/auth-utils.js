@@ -2,11 +2,10 @@ const axios = require('axios');
 const { sleep, isNullOrEmpty } = require('./common-utils');
 const { getApiUrl } = require('./api-utils');
 
-const API_AUTH_USERNAME = 'admin@oat.com';
-const API_AUTH_PASSWORD = '123456';
-const API_AUTH_REMEMBER_ME = false;
-
-const API_AUTH_ATTEMPT_COUNT = 5;
+const API_AUTH_USERNAME = process.env.API_AUTH_USERNAME;
+const API_AUTH_PASSWORD = process.env.API_AUTH_PASSWORD;
+const API_AUTH_REMEMBER_ME = process.env.API_AUTH_REMEMBER_ME ?? false;
+const API_AUTH_ATTEMPT_COUNT = process.env.API_AUTH_ATTEMPT_COUNT ?? 5;
 
 let cachedAuthToken;
 

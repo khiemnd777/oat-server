@@ -1,10 +1,11 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const { wrap } = require('./utils/auth-utils');
 const { getApiUrl, testApiAvailable } = require('./utils/api-utils');
 
-const PORT = 8000;
+const PORT = process.env.PORT ?? 8000;
 
 const corsOptions = {
   origin: getApiUrl(),

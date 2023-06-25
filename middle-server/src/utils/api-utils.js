@@ -3,8 +3,8 @@ const RoutePattern = require('route-pattern');
 
 module.exports = {
   getApiUrl() {
-    const API_URL = 'http://localhost';
-    const API_PORT = 5000;
+    const API_URL = process.env.API_URL ?? 'http://localhost';
+    const API_PORT = process.env.API_PORT ?? 5000;
     return `${API_URL}:${API_PORT}`;
   },
   testApiAvailable(path, method = 'GET') {
