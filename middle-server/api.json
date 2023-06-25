@@ -1,0 +1,68 @@
+{
+  "api": [
+    {
+      "path": "api/categories",
+      "method": "GET"
+    },
+    {
+      "path": "api/categories/:id",
+      "method": "GET"
+    },
+    {
+      "path": "api/products",
+      "method": "GET"
+    },
+    {
+      "path": "api/products/:id",
+      "method": "GET"
+    },
+    {
+      "path": "api/products/categories",
+      "method": "GET"
+    },
+    {
+      "path": "api/shopping_cart_items/:id",
+      "method": "GET"
+    },
+    {
+      "path": "api/shopping_cart_items/:id",
+      "method": "PUT"
+    },
+    {
+      "path": "api/shopping_cart_items/:id",
+      "method": "DELETE"
+    },
+    {
+      "path": "api/shopping_cart_items",
+      "method": "POST"
+    },
+    {
+      "path": "api/shopping_cart_items/batch",
+      "method": "POST"
+    },
+    {
+      "path": "api/orders/:id",
+      "method": "GET"
+    },
+    {
+      "path": "api/orders/:id",
+      "method": "PUT"
+    },
+    {
+      "path": "api/orders",
+      "method": "POST"
+    },
+    {
+      "path": "api/orders/:orderId/items",
+      "method": "GET"
+    },
+    {
+      "path": "api/orders/customer/:customerId",
+      "method": "GET"
+    },
+    {
+      "path": "api/orders/:orderId/pdf-invoice",
+      "method": "GET"
+    }
+  ]
+}

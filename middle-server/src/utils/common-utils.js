@@ -13,9 +13,4 @@ module.exports = {
       Object.is(val, null)
     );
   },
-  getApiUrl() {
-    const API_URL = 'http://localhost';
-    const API_PORT = 5000;
-    return `${API_URL}:${API_PORT}`;
-  },
 };

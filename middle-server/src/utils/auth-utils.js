@@ -1,5 +1,6 @@
 const axios = require('axios');
-const { sleep, isNullOrEmpty, getApiUrl } = require('./common-utils');
+const { sleep, isNullOrEmpty } = require('./common-utils');
+const { getApiUrl } = require('./api-utils');
 
 const API_AUTH_USERNAME = 'admin@oat.com';
 const API_AUTH_PASSWORD = '123456';

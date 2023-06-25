@@ -410,6 +410,11 @@ raw-body@2.5.2:
     iconv-lite "0.4.24"
     unpipe "1.0.0"
 
+route-pattern@^0.0.6:
+  version "0.0.6"
+  resolved "https://npm.wellbarrier.com/route-pattern/-/route-pattern-0.0.6.tgz#0d6edf33be73fafba4242e4780e306de0ba907fa"
+  integrity sha512-CrzsZLoNCaHF4X83qFsVH0MCyVwPvXEOh0rkw5Ix3aIXn4Bq82u5lzuJ4AzuPzeBL4a1lbMH41a4zJdMNDosBw==
+
 safe-buffer@5.2.1:
   version "5.2.1"
   resolved "https://npm.wellbarrier.com/safe-buffer/-/safe-buffer-5.2.1.tgz#1eaf9fa9bdb1fdd4ec75f58f9cdb4e6b7827eec6"
