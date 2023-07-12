@@ -63,34 +63,35 @@
         }
 
     }
-    @foreach (var topic in Model.Topics)
+    @*
+    @foreach (var topic in model.topics)
     {
-        <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
+        <li><a href="@url.routeurl("topic", new { sename = topic.sename })">@topic.name</a></li>
     }
-    @if (Model.NewProductsEnabled && Model.DisplayNewProductsMenuItem)
+    @if (model.newproductsenabled && model.displaynewproductsmenuitem)
     {
-        <li><a href="@Url.RouteUrl("NewProducts")">@T("Products.NewProducts")</a></li>
+        <li><a href="@url.routeurl("newproducts")">@t("products.newproducts")</a></li>
     }
-    @if (Model.DisplayProductSearchMenuItem)
+    @if (model.displayproductsearchmenuitem)
     {
-        <li><a href="@Url.RouteUrl("ProductSearch")">@T("Search")</a></li>
+        <li><a href="@url.routeurl("productsearch")">@t("search")</a></li>
     }
-    @if (Model.DisplayCustomerInfoMenuItem)
+    @if (model.displaycustomerinfomenuitem)
     {
-        <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+        <li><a href="@url.routeurl("customerinfo")">@t("account.myaccount")</a></li>
     }
-    @if (Model.BlogEnabled && Model.DisplayBlogMenuItem)
+    @if (model.blogenabled && model.displayblogmenuitem)
     {
-        <li><a href="@Url.RouteUrl("Blog")">@T("Blog")</a></li>
+        <li><a href="@url.routeurl("blog")">@t("blog")</a></li>
     }
-    @if (Model.ForumEnabled && Model.DisplayForumsMenuItem)
+    @if (model.forumenabled && model.displayforumsmenuitem)
     {
-        <li><a href="@Url.RouteUrl("Boards")">@T("Forum.Forums")</a></li>
+        <li><a href="@url.routeurl("boards")">@t("forum.forums")</a></li>
     }
-    @if (Model.DisplayContactUsMenuItem)
+    @if (model.displaycontactusmenuitem)
     {
-        <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
-    }
+        <li><a href="@url.routeurl("contactus")">@t("contactus")</a></li>
+    }*@
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HeaderMenuAfter, additionalData = Model })
 </ul>
 @{
@@ -117,6 +118,7 @@
             }
 
         }
+        @*
         @foreach (var topic in Model.Topics)
         {
             <li><a href="@Url.RouteUrl("Topic", new { SeName = topic.SeName })">@topic.Name</a></li>
@@ -144,7 +146,7 @@
         @if (Model.DisplayContactUsMenuItem)
         {
             <li><a href="@Url.RouteUrl("ContactUs")">@T("ContactUs")</a></li>
-        }
+        }*@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.MobHeaderMenuAfter, additionalData = Model })
     </ul>
 

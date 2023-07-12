@@ -24,7 +24,7 @@
     var breadcrumbDelimiter = commonSettings.BreadcrumbDelimiter;
 }
 @*category breadcrumb*@
-@section Breadcrumb
+@* @section Breadcrumb
 {
     @if (Model.DisplayCategoryBreadcrumb)
     {
@@ -61,7 +61,7 @@
         </div>
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.CategoryDetailsAfterBreadcrumb, additionalData = Model })
     }
-}
+} *@
 
 @section CatalogFilters {
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.CategoryDetailsBeforeFilters, additionalData = Model })
@@ -126,7 +126,7 @@
             </div>
         }
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.CategoryDetailsAfterFeaturedProducts, additionalData = Model })
-        @await Html.PartialAsync("_CatalogSelectors", Model.CatalogProductsModel)
+        @*@await Html.PartialAsync("_CatalogSelectors", Model.CatalogProductsModel)*@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.CategoryDetailsBeforeProductList, additionalData = Model })
         @{ 
             var catalogProductsViewData = new ViewDataDictionary(ViewData);
