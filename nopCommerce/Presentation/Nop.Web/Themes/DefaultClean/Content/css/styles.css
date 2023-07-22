@@ -1835,6 +1835,7 @@ label, label + * {
   text-transform: uppercase;
   font-weight: 600;
   border-radius: 10px;
+  box-shadow: 5px 5px 0px 0px #3582b1;
 }
 
 .item-box .product-box-add-to-cart-button:hover,
@@ -1986,12 +1987,14 @@ label, label + * {
   text-align: center;
   font-size: 14px; /*reset zeroing*/
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .pager li span {
   border-color: transparent;
   background-color: #4ab2f1;
   color: #fff;
+  border-radius: 5px;
 }
 
 .pager li.previous-page *,

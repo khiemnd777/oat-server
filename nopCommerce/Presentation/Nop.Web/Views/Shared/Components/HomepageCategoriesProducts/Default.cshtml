@@ -3,6 +3,12 @@
 @using Nop.Core.Domain.Seo
 @inject Nop.Core.IWebHelper webHelper
 
+@{
+    // Open product in detail via popup
+    NopHtml.AppendCssFileParts("~/js/product/product-detail-popup.css");
+    NopHtml.AppendScriptParts(ResourceLocation.Footer, "~/js/product/product-detail-popup.js");
+}
+
 <div class="page category-page">
     <div class="page-title">
         <h1>@Model.Name</h1>
