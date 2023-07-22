@@ -1683,14 +1683,17 @@ label, label + * {
   position: relative;
   width: 100%;
   float: left;
-  margin: 0 0 80px;
+  margin: 0 0 50px;
   text-align: left;
+}
+.item-box .product-item {
+  display: flex;
 }
 
 .item-box .picture {
   z-index: 1;
   background-color: #fff;
-  margin: 0 0 20px;
+  flex: 1;
 }
 
 .item-box .picture a {
@@ -1720,6 +1723,10 @@ label, label + * {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
 
 .item-box:hover .picture a img {
@@ -1727,12 +1734,16 @@ label, label + * {
 }
 
 .item-box .details {
-  padding: 0 10px;
+  padding: 0 0 0 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .item-box .product-title {
+  flex: 1;
   margin: 0 0 10px;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 1.2;
   font-weight: normal;
   color: #4ab2f1;
@@ -1783,14 +1794,14 @@ label, label + * {
 
 .item-box .old-price {
   margin: 0 5px 0 0;
-  font-size: 16px;
+  font-size: 14px;
   color: #aaa;
   text-decoration: line-through;
 }
 
 .item-box .actual-price {
   margin: 0 5px 0 0;
-  font-size: 16px;
+  font-size: 14px;
   color: #666;
 }
 
@@ -1816,12 +1827,15 @@ label, label + * {
 }
 
 .item-box .product-box-add-to-cart-button {
-  width: 60%;
+  width: 100%;
   background-color: #4ab2f1;
   text-align: center;
-  font-size: 15px;
+  font-size: 13px;
   color: #fff;
   text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0px 0px #3582b1;
 }
 
 .item-box .product-box-add-to-cart-button:hover,
@@ -1973,12 +1987,14 @@ label, label + * {
   text-align: center;
   font-size: 14px; /*reset zeroing*/
   cursor: pointer;
+  border-radius: 5px;
 }
 
 .pager li span {
   border-color: transparent;
   background-color: #4ab2f1;
   color: #fff;
+  border-radius: 5px;
 }
 
 .pager li.previous-page *,
@@ -6681,6 +6697,7 @@ label, label + * {
     color: #fff;
     text-transform: uppercase;
     cursor: pointer;
+    border-radius: 10px;
   }
 
   .top-menu {

@@ -3,7 +3,7 @@
 }
 @{
     //current category ID
-    var currentCategoryId = 0;
+    var currentCategoryId = 1;
     if (Url.ActionContext.RouteData.Values["controller"].ToString().Equals("catalog", StringComparison.InvariantCultureIgnoreCase) &&
         Url.ActionContext.RouteData.Values["action"].ToString().Equals("category", StringComparison.InvariantCultureIgnoreCase))
     {
@@ -44,12 +44,12 @@
         @await RenderSectionAsync("CatalogFilters", false);
         @await Component.InvokeAsync("CategoryNavigation", new { currentCategoryId = currentCategoryId, currentProductId = currentProductId })
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.LeftSideColumnAfterCategoryNavigation })
-        @await Component.InvokeAsync("ManufacturerNavigation", new { currentManufacturerId = currentManufacturerId })
+        @* @await Component.InvokeAsync("ManufacturerNavigation", new { currentManufacturerId = currentManufacturerId })
         @await Component.InvokeAsync("VendorNavigation")
         @await Component.InvokeAsync("RecentlyViewedProductsBlock", new { productThumbPictureSize = 64 })
         @await Component.InvokeAsync("PopularProductTags")
         @await Component.InvokeAsync("PollBlock", new { systemKeyword = "LeftColumnPoll" })
-        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.LeftSideColumnAfter })
+        @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.LeftSideColumnAfter }) *@
     }
 </div>
 <div class="center-2">

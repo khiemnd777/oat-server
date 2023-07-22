@@ -5,7 +5,7 @@
 <div class="products-container">
     <div class="ajax-products-busy"></div>
     <div class="products-wrapper">
-        @await Html.PartialAsync("_ProductsInGridOrLines", Model)
+        @await Html.PartialAsync("~/Views/Catalog/_ProductsInGridOrLines.cshtml", Model)
     </div>
 </div>
 <script asp-location="Footer">

@@ -1,0 +1,48 @@
+.overlay {
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #00000036;
+  z-index: 10;
+}
+.overlay .modal {
+  position: relative;
+  width: 100%;
+  margin: 10px 10px 30px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.overlay .modal .content {
+  position: relative;
+  height: 100%;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.overlay .modal .close_btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 15px;
+  display: inline-table;
+  color: #fff;
+  background-color: #4ab2f1;
+  box-shadow: 5px 5px 0 0 #3582b1;
+}
+.overlay .modal .close_btn::after {
+  display: inline-block;
+  content: 'Close';
+  text-transform: uppercase;
+}
+body.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
