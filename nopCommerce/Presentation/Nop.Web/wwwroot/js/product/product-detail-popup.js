@@ -1,10 +1,8 @@
 console.warn('Product in detail popup');
 
 const openDetailProductPopup = async (id, fetchUrl) => {
-  console.log(`open ${id}`);
   const result = await fetchContent(fetchUrl);
   $('body').addClass('stop-scrolling');
-  console.log(result);
   const $modal = $(`<div class="overlay" />`).append(
     $(`<div class="modal" />`)
       .append($(`<div class="content" />`).html(result))
